@@ -24,9 +24,11 @@ function validation(event) {
 
   if (firstName.value === "") {
     spanFirstName.textContent = "Required!";
+    firstName.style.outline = "1px solid #d00707";
     err = true;
   } else if (!rejxname.test(firstName.value)) {
     spanFirstName.textContent = "Enter A Character!";
+    firstName.style.outline = "1px solid #d00707";
     err = true;
   } else {
     spanFirstName.textContent = "";
@@ -35,9 +37,11 @@ function validation(event) {
 
   if (lastName.value === "") {
     spanLastName.textContent = "Required!";
+    lastName.style.outline = "1px solid #d00707";
     err = true;
   } else if (!rejxname.test(lastName.value)) {
     spanLastName.textContent = "Enter A Character!";
+    lastName.style.outline = "1px solid #d00707";
     err = true;
   } else {
     spanLastName.textContent = "";
@@ -46,9 +50,11 @@ function validation(event) {
 
   if (email.value === "") {
     spanEmail.textContent = "Required!";
+    email.style.outline = "1px solid #d00707";
     err = true;
   } else if (!regxEmail.test(email.value)) {
     spanEmail.textContent = "Enter A Character!";
+    email.style.outline = "1px solid #d00707";
     err = true;
   } else {
     spanEmail.textContent = "";
@@ -57,9 +63,11 @@ function validation(event) {
 
   if (passWord.value === "") {
     spanPass.textContent = "Required!";
+    passWord.style.outline = "1px solid #d00707";
     err = true;
   } else if (!rejxPass.test(passWord.value)) {
     spanPass.textContent = "Enter A Password!";
+    passWord.style.outline = "1px solid #d00707";
     err = true;
   } else {
     spanPass.textContent = "";
@@ -68,29 +76,27 @@ function validation(event) {
 
   if (reEnterPass.value === "") {
     spanPass.textContent = "Required!";
+    reEnterPass.style.outline = "1px solid #d00707";
     err = true;
   } else if (reEnterPass.value !== passWord.value) {
     spanReEnterPw.textContent = "Passwords do not match!";
+    reEnterPass.style.outline = "1px solid #d00707";
     err = true;
   } else {
-    spanPass.textContent = "";
+    spanReEnterPw.textContent = "";
     err = false;
   }
 
   if (!err) {
-    const u = new User(
-      firstName.value,
-      lastName.value,
-      email.value,
-      passWord.value
-    );
+    const u = new User(firstName.value, lastName.value, email.value, passWord.value);
     let users = getUsersArr();
     users.push(u);
     localStorage.setItem("users", JSON.stringify(users));
+    location.replace("/login.html");
   }
 }
-function getUsersArr() {
-  let users = localStorage.getItem("users");
+export function getUsersArr() {
+  const users = localStorage.getItem("users");
   return users ? JSON.parse(users) : []; // law fe users array hatha lw mafesh e3mle array
 }
 
@@ -104,3 +110,5 @@ class User {
     this.password = p;
   }
 }
+
+
