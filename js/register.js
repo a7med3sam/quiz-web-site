@@ -1,5 +1,7 @@
-let form = document.getElementsByClassName("form")[0];
+import { getUsersArr } from "./helper.js";
 
+let form = document.getElementsByClassName("form")[0];
+console.log(form)
 let firstName = document.getElementById("firstName");
 let spanFirstName = document.getElementById("span-first-name");
 let rejxname = /^[a-zA-Z ]{2,30}$/;
@@ -95,10 +97,7 @@ function validation(event) {
     location.replace("/login.html");
   }
 }
-export function getUsersArr() {
-  const users = localStorage.getItem("users");
-  return users ? JSON.parse(users) : []; // law fe users array hatha lw mafesh e3mle array
-}
+
 
 form.addEventListener("submit", validation);
 

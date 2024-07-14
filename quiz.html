@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style/quiz.css">
+</head>
+<body>
+  <div class="container">
+    <div id="timer">Time out:<span id="timeLeft"></span></div>
+    <div class="question-seqtion">
+      <div class="test">
+        <div class="question-collector">
+          <div id="question"></div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="answer" id="option1" />
+              <label for="option1" id="labelOption1"></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer" id="option2" />
+              <label for="option2" id="labelOption2"></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer" id="option3" />
+              <label for="option3" id="labelOption3"></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer" id="option4" />
+              <label for="option4" id="labelOption4"></label>
+            </div>
+          </div>
+        </div>
+        <div class="mark-seqtion" id="markedQuestions">
+          <div class="title-ques">
+            <h2>Marked Questions </h2>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <button id="previous" class="btn">Previous</button>
+        <button id="next" class="btn">Next</button>
+        <button id="submit" class="btn">Submit</button>
+        <button id="mark">Mark</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

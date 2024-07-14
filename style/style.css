@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #30c05a;
+  --lightgreen: #4bc970;
+  --dark: #384047;
+  --bgwhite: #f4f7f8;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--dark);
+  background-color: var(--bgwhite);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #384047;
+}
+
+.form, .log-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 565px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 3px 18px 1px lightgray;
+}
+
+.log-form{
+  width: 24%;
+  height: 400px;
+}
+
+.title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.title i {
+  font-size: 30px;
+  color: var( --green);
+}
+
+#firstName,
+#lastName,
+#email,
+#password,
+#reEnterPassword {
+  border: none;
+  border-radius: 9px;
+  background-color: #aea3a31a;
+  height: 40px;
+  padding-left: 15px;
+  width:52%;
+}
+
+#firstName,
+#lastName,
+#email,
+#password,
+#reEnterPassword:focus {
+  outline: none;
+}
+
+#submit, #log-in {
+  padding: 19px 39px 18px 39px;
+  color: #fff;
+  background-color: var( --green);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  box-shadow: 0 1px 0 #4bc9701a;
+}
+
+#submit:hover {
+  background-color: var(--lightgreen);
+  transition: 0.5;
+}
+
+#log-in{
+  padding:10px 25px 10px 25px;
+  font-size: 18px;
+  width: 100%;
+}
+
+#log-in:hover{
+  background-color: var(--lightgreen);
+  transition: 0.5;
+}
+
+#span-first-name,
+#span-last-name,
+#span-email,
+#span-pw,
+#span-reEnter {
+  color: #d00707;
+  font-size: 12px;
+  margin-left: 3px;
+  display: block;
+  position: absolute;
+  top: 106%;
+  right: 7%;
+ 
+}
+.form-group {
+  width: 100%;
+  position: relative;
+}
+.form-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 46px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .log-form {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .log-form {
+    width: 55%;
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .log-form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .log-form {
+    width: 90%;
+    box-shadow: none;
+  }
+  .form-group {
+    padding: 0 20px;
+    box-shadow: none;
+  }
+}

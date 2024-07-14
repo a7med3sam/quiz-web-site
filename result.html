@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Final Results</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-bg">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<h2>Quiz Result</h2>
+			<div class="score">
+				<p>Your score is: <strong id="score"></strong></p>
+				<p id="resultMessage"></p>
+			</div>
+		</div>
+		<script>
+			// Get score from query parameter
+			const urlParams = new URLSearchParams(window.location.search);
+			const score = urlParams.get('score');
+			const scoreDisplay = document.getElementById('score');
+			const resultMessage = document.getElementById('resultMessage');
+
+			scoreDisplay.textContent = score;
+
+			if (score >= 2) {
+				resultMessage.textContent = 'Congratulations! You passed the quiz.';
+			} else {
+				resultMessage.textContent = 'Sorry! You did not pass the quiz. Please try again.';
+			}
+		</script>
+
+</body>
+
+</html>

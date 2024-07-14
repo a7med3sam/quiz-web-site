@@ -1,6 +1,7 @@
-import {getUsersArr} from "./register.js";
 
-let form = document.getElementsByClassName("form")[0];
+import { getUsersArr } from "./helper.js";
+
+let form = document.getElementsByClassName("log-form")[0];
 
 let email = document.getElementById("email");
 let spanEmail = document.getElementById("span-email");
@@ -28,10 +29,11 @@ function validate(e){
      const user = users.find(u => u.email === email.value && u.password === passWord.value);
     
       if (user) {
-        alert("Login successful!");
+        location.replace("/quiz.html");
         
       } else {
-        alert("Please try again.");
+        form.style.outline = "1px solid #d00707";
+        spanPass.textContent = "Email & Password Not Valid !";
       }
     
 }
