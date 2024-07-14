@@ -34,15 +34,16 @@ let timerDisplay = document.getElementById("timeLeft");
 let markedQuestionsDiv = document.getElementById("markedQuestions");
 let timerInterval;
 let currentIndex = 0;
-let timeLeft = 400; // Total time in seconds
+let timeLeft = 10; // Total time in seconds
 
 function updateQuestion() {
     let currentQuestion = quiz[currentIndex];
     impo.textContent = currentQuestion.title;
+
     for (let i = 0; i < options.length; i++) {
         options[i].querySelector("label").textContent = currentQuestion.answers[i].body;
         radioInputs[i].checked = false; // Reset radio button selection
-        radioInputs[i].disabled = false; // Enable radio buttons
+        // radioInputs[i].disabled = false; // Enable radio buttons
 
         // Highlight selected answer if already selected
         if (currentQuestion.getSelectedAnswer() === i) {
@@ -82,14 +83,18 @@ function calculateScore() {
     return correctAnswers;
 }
 
+
+
 function startTimer(minutes) {
     let seconds = minutes * 60;
 
     function updateCountdown() {
         let mins = Math.floor(seconds / 60);
         let secs = seconds % 60;
+
         secs = secs < 10 ? '0' + secs : secs; // add leading zero if seconds less than 10
         timerDisplay.textContent = `${mins}:${secs}`;
+
 
         if (seconds > 0) {
             seconds--;
@@ -112,7 +117,7 @@ function toggleMarkQuestion() {
     let currentQuestion = quiz[currentIndex];
 
     // Check if the question is already marked
-    let existingMarkedQuestion = Array.from(markedQuestionsDiv.children).find((div) => parseInt(div.dataset.index) === currentIndex);
+    let existingMarkedQuestion = Array.from(markedQuestionsDiv.children).find((div) => Number(div.dataset.index) === currentIndex);
 
     if (!existingMarkedQuestion) {
         // Mark the question
@@ -137,7 +142,7 @@ function toggleMarkQuestion() {
 }
 
 function updateMarkButton() {
-    let currentQuestion = quiz[currentIndex];
+    // let currentQuestion = quiz[currentIndex];
     let existingMarkedQuestion = Array.from(markedQuestionsDiv.children).find((div) => parseInt(div.dataset.index) === currentIndex);
 
     if (existingMarkedQuestion) {
@@ -161,6 +166,16 @@ function toggleMarkedQuestionsSection() {
         markedQuestionsDiv.classList.remove("slideIn");
     }
 }
+
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
 
 shuffleArray(quiz);
 updateQuestion();
@@ -196,9 +211,3 @@ radioInputs.forEach((radio, index) => {
     });
 });
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}

@@ -1,4 +1,5 @@
 import { getUsersArr } from "./helper.js";
+import { User } from "./User.js";
 
 let form = document.getElementsByClassName("form")[0];
 console.log(form)
@@ -100,14 +101,4 @@ function validation(event) {
 
 
 form.addEventListener("submit", validation);
-
-class User {
-  constructor(f, l, e, p) {
-    this.firstName = f;
-    this.lastName = l;
-    this.email = e;
-    this.password = p;
-  }
-}
-
 
