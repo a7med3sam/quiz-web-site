@@ -95,7 +95,7 @@ function validation(event) {
     let users = getUsersArr();
     users.push(u);
     localStorage.setItem("users", JSON.stringify(users));
-    location.replace("/login.html");
+    location.replace("login.html");
   }
 }
 

@@ -30,7 +30,7 @@ function validate(e){
       } else {
         spanPass.textContent = "";
          if (user) {
-           location.replace("/quiz.html");
+           location.replace("quiz.html");
          } else {
          spanPass.textContent = "Email & Password Not Valid !";
          }
