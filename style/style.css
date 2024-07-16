@@ -28,11 +28,11 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 400px;
-  height: 565px;
+  width: 450px;
+  height: 585px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 1px 3px 18px 1px lightgray;
+  box-shadow: 1px 3px 10px 1px lightgray;
 }
 
 .log-form{
@@ -42,8 +42,27 @@ body {
 
 .title {
   display: flex;
-  gap: 15px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.title .icon img {
+  width: 120px;
+  height: 45px;
+}
+
+.title .icon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.title .icon p {
+  color: #aea3a31a;
 }
 
 .title i {
@@ -57,11 +76,12 @@ body {
 #password,
 #reEnterPassword {
   border: none;
-  border-radius: 9px;
+  border-radius: 4px;
   background-color: #aea3a31a;
   height: 40px;
   padding-left: 15px;
-  width:52%;
+  width: 69%;
+  font-size: 12px;
 }
 
 #firstName,
@@ -73,13 +93,12 @@ body {
 }
 
 #submit, #log-in {
-  padding: 19px 39px 18px 39px;
+  padding: 10px 30px;
   color: #fff;
   background-color: var( --green);
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 4px;
   border: 1px solid #3ac162;
   box-shadow: 0 1px 0 #4bc9701a;
 }
@@ -110,8 +129,8 @@ body {
   margin-left: 3px;
   display: block;
   position: absolute;
-  top: 106%;
-  right: 7%;
+  top: 114%;
+  right: 13%;
  
 }
 .form-group {
@@ -123,7 +142,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 46px 0;
+  padding: 0 40px;
+}
+
+div p > a {
+  text-decoration: none;
+  color: var(--green);
 }
 
 /* Media Queries for Responsiveness */
@@ -152,7 +176,10 @@ body {
     box-shadow: none;
   }
   .form-group {
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: none;
+  }
+  .form-input{
+    padding: 0 14px ;
   }
 }
