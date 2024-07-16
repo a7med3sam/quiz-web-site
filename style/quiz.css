@@ -9,6 +9,7 @@
   --lightgreen: #4bc970;
   --dark: #384047;
   --bgwhite: #f4f7f8;
+  --yellow: rgb(225, 215, 23);
 }
 
 body {
@@ -23,7 +24,18 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
+}
+
+.bar {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.bar button i {
+  font-size: 50px;
+  color: var(--yellow);
 }
 
 .test {
@@ -43,8 +55,8 @@ body {
 }
 
 .question-collector {
-  border-radius: 5px;
-  box-shadow: 1px 3px 18px 1px lightgray;
+  border-radius: 6px;
+  box-shadow: 1px 3px 10px 1px lightgray;
   width: 70%;
   height: 445px;
   text-align: center;
@@ -73,7 +85,7 @@ body {
 label {
   width: 100%;
   height: 50px;
-  padding-top: 10px;
+  padding: 13px 0;
 }
 
 input[type="radio"]:checked+label {
@@ -95,21 +107,20 @@ label {
 .btns {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
-  width: 70%;
+  margin-top: 40px;
+  width: 100%;
   justify-content: space-around;
 }
 
-.btn, #mark {
+.btn {
   color: #fff;
   background-color: var(--green);
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 13%;
-  box-shadow: 0 1px 0 #4bc9701a;
-  padding-top: 4px;
   border: none;
+  height: 40px;
 }
 
 .btn:hover {
@@ -118,20 +129,17 @@ label {
 }
 
 #mark {
-  padding: 20px 0;
-  background-color: rgb(225, 215, 23);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-#mark:hover {
-  background-color: rgb(241 232 52);
-  transition: 0.5;
-}
+
 
 #timer {
-  font-size: 24px;
   height: 60px;
   width: 11%;
-  background-color: #30c05a54;
+  background-color: #aea3a31a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,6 +163,7 @@ label {
 #markedQuestions {
   box-shadow: 0 1px 0 #4bc9701a;
 }
+
 
 @keyframes slideIn {
   from {
@@ -188,7 +197,7 @@ label {
   background-color: #393838;
   padding: 5px;
   width: 80%;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #f4f7f8;
   text-align: center;
 }
@@ -218,6 +227,10 @@ label {
   .title-ques h2 {
    font-size: 18px;
   }
+  .bar {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 
@@ -228,6 +241,7 @@ label {
     padding: 10px 0;
     width: 20%;
     font-size: 14px;
+
   }
   .btns{
     display: flex;
@@ -240,14 +254,30 @@ label {
   }
 
   .mark-seqtion {
-    width: 100%; 
+    width: 84%; 
+
+    margin-left: 8%;
     height: 190px
   }
   .question-collector{
     width: 100%;
     box-shadow: none;
+    height: 376px;
   }
   .test{
     flex-direction: column;
+  }
+  .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #question {
+    font-size: 23px;
+    padding: 0;
+  }
+
+  label{
+    font-size: 17px;
   }
 }
