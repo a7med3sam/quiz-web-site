@@ -180,8 +180,11 @@ label {
 .marked-question {
   cursor: pointer;
   padding: 10px;
-  border-bottom: 1px solid #2d1414;
   text-align: center;
+  background-color: #f2be42;
+  margin: 20px 5px;
+  border-radius: 5px;
+
 }
 
 .title-ques {

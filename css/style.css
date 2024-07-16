@@ -11,7 +11,7 @@ body {
 #notfound {
   position: relative;
   height: 100vh;
-  background-color: #fafbfd;
+  background-color: #f1f1f1;
 }
 
 #notfound .notfound {
@@ -44,7 +44,7 @@ body {
   width: 100%;
   background: #fff;
   border-radius: 90px;
-  height: 125px;
+  height: 140px;
 }
 
 .notfound .notfound-bg > div:nth-child(1) {
@@ -85,18 +85,40 @@ body {
   margin: 0;
   font-weight: 700;
   color: #151515;
+  /* color: #269a48; */
+  font-size: 33px;
 }
 
+
+#image-stauts{
+  width: 150px;
+  margin: 10px 0;
+}
+.score{
+  font-size: 20px;
+}
+
+.score #score-number{
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: white;
+}
 
 @media only screen and (max-width: 767px) {
     .notfound .notfound-bg {
       width: 287px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .notfound .notfound-bg > div {
-      height: 85px;
+      height: 140px;
+      width: 320px;
   }
+  #resultMessage {
+    font-size: 18px;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -106,5 +128,19 @@ body {
 
   .notfound h2 {
     font-size: 18px;
+  }
+  .notfound .notfound-bg > div {
+
+
+    border-radius: 90px;
+    height: 140px;
+  }
+  .score {
+    font-size: 13px;
+  }
+
+  .notfound h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 }
