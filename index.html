@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Hero</title>
-  <link rel="stylesheet" href="css/landing page.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Registration</a></li>
-      </ul>
-      <h1 class="logo">Exam Evolved</h1>
-    </nav>
-  </header>
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #bdeb9e;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+          background-image: url(ffflux.svg);
+          background-position: center;
+          background-size: cover;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .card {
+        border-radius: 15px;
+        width: 420px;
+        height: 400px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #fff;
+        color: #0d6a87;
+        top: 200px;
+        /* top: 50%; */
+        /* right: 80%; */
+      }
+      img {
+        position: absolute;
+        width: 500px;
+        top: -344px;
+        right: 36px;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #daa507;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 250px;
+        font-size: 20px;
+      }
+      #Registration {
+        background-color: transparent;
+        color: #daa507;
+        border: 1px solid #daa507;
+      }
+      .under-photo {
+        /* margin-top: 30%; */
+        padding-top: 40%;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      button a{
+        text-decoration: none;
+        color: #fff;
+        /* color: #daa507; */
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+      }
+      .regi{
+        color: #daa507;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-      <!-- <img src="res-img.png" alt=""> -->
-       <img src="exams-animate.svg" alt="">
-      <div class="hero-text">
-        <h1>Unleash Exam Potential</h1>
-        <p>Sharpen your skills with a variety of question formats on our secure online testing platform !
-        </p>
-        <button>Get Started</button>
-      </div>
+      <div class="card">
+        <img src="exams-animate22.svg" alt="" />
+        <div class="under-photo">
+          <h1>Let's DO It</h1>
+          <button><a href="login.html">Login</a></button>
+          <br />
+          <button id="Registration"><a class="regi" href="register.html">Registration</a></button>
+        </div>
+      </di>
     </div>
-  </main>
-</body>
+  </body>
 </html>
